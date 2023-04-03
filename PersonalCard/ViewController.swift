@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var baloonLogoImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainLabel.textColor = .white
@@ -25,6 +27,7 @@ class ViewController: UIViewController {
         loginTextField.isHidden = true
         loginButton.isHidden = true
         passwordTextField.isHidden = true
+        baloonLogoImage.isHidden = true
     }
 
 
@@ -41,6 +44,7 @@ class ViewController: UIViewController {
         loginTextField.isHidden = false
         passwordTextField.isHidden = false
         loginButton.isHidden = false
+        baloonLogoImage.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
             self.BackgroundSwitch.isHidden = true
         })
